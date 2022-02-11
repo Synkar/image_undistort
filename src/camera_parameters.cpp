@@ -10,10 +10,10 @@ BaseCameraParameters::BaseCameraParameters(const ros::NodeHandle& nh,
 
   XmlRpc::XmlRpcValue K_in;
   bool K_loaded = false;
-  if (nh.getParam(camera_namespace + "/K", K_in)) {
-    xmlRpcToMatrix(K_in, &K_);
-    K_loaded = true;
-  }
+  // if (nh.getParam(camera_namespace + "/K", K_in)) {
+  //   xmlRpcToMatrix(K_in, &K_);
+  //   K_loaded = true;
+  // }
 
   std::vector<double> intrinsics_in;
   if (nh.getParam(camera_namespace + "/intrinsics", intrinsics_in)) {
